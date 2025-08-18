@@ -1,69 +1,127 @@
-
 body{
     background-color: rgb(122, 231, 231);
     margin: auto;
 }
+
 .container{
     display: flex;
     justify-content: space-between;
-  box-shadow: 1px 1px 1px #666;
-  background-color: aquamarine;
-  margin-left: 5px;
-
-
+    box-shadow: 1px 1px 1px #666;
+    background-color: aquamarine;
+    margin-left: 5px;
 }
+
 .container2{
     display: flex;
-    justify-content: space-between ;
-   
-
+    justify-content: space-between;
 }
+
 .a{
     padding:15px;
     color: #0d0b0b;
 }
 
- .landing{
+.landing{
     margin-top: 40px;
     display:flex;
     flex-direction: column;
     align-items: center;
-   
-    
-   
 }
+
 .img1{
     height: 400px;
-
 }
+
 #text{
     display: flex;
     margin-left: 630px;
     text-align: center;
-
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
 } 
+
 .btn{
     padding:10px;
     color: white;
-    background-color:  rgb(63, 63, 138);
+    background-color:  rgb(67, 67, 168);
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: auto;
-    align-items: center;
     border: rgb(77, 77, 155);
-    border-radius: 2px;
+    border-radius: 5px;
     font-weight: bold;
+    width: 200px;
+    font-size: medium;
+    height: 40px;
 }
+
 .paragraph{
     font-family: Georgia, 'Times New Roman', Times, serif;
-     display: flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     font-size: larger;
-    
-    
 }
-    
+
+@media (max-width: 600px) {
+  .container,
+  .container2 {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+  }
+
+  .img1 {
+    height: 200px;
+    width: 90%;
+  }
+
+  #text {
+    margin-left: 0;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .btn {
+    width: 90%;
+    margin: 10px 0;
+  }
+
+  .paragraph {
+    font-size: medium;
+    padding: 0 10px;
+  }
+
+  .a {
+    padding: 10px;
+    text-align: center;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .container,
+  .container2 {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .img1 {
+    height: 300px;
+    width: 80%;
+  }
+
+  #text {
+    margin-left: 0;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+@media (min-width: 1025px) {
+  
+
+  #text {
+    margin-left: 630px;
+  }
+}
